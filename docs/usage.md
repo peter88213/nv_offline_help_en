@@ -8,12 +8,14 @@ Offline help pages for [novelibre](https://github.com/peter88213/novelibre/).
 
 # Installation
 
-If [novelibre](https://github.com/peter88213/novelibre/) is installed, the setup script *setup.py* installs the *nv_offline_help_en* plugin in the *novelibre* plugin directory.
+If [novelibre](https://github.com/peter88213/novelibre/) is installed, the setup script *setup.py* 
+installs the *nv_offline_help_en* plugin in the *novelibre* plugin directory, 
+and copies the HTML help pages to the novelibre installation directory. 
 
-
----
 
 # Operation
+
+The plugin automatically redirects help requests to the locally installed help pages. 
 
 ---
 

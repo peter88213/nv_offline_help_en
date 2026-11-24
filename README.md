@@ -4,6 +4,11 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 *nv_offline_help_en* is a plugin providing offline help pages, replacing the built-in online help. 
 
+The setup script copies the HTML help pages to the novelibre installation directory. 
+The plugin automatically redirects help requests to the locally installed help pages. 
+
+
+
 ## Requirements
 
 - [novelibre](https://github.com/peter88213/novelibre/) version 5.63+
