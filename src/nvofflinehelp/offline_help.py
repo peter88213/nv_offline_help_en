@@ -19,9 +19,8 @@ class OfflineHelp:
             if '#' in page:
                 page = page.split('#')[0]
             elif not page.endswith('.html'):
-                if not page.endswith('/'):
+                if page and not page.endswith('/'):
                     page = f'{page}/'
                 page = f'{page}index.html'
-        print(f'{site}/{page}')
         webbrowser.open(f'{site}/{page}')
 
