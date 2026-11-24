@@ -1,8 +1,8 @@
-"""Plugin template for novelibre.
+"""English offline help pages for novelibre.
 
 Requires Python 3.7+
 Copyright (c) 2024-2026 Peter Triesberger
-For further information see https://github.com/peter88213/nv_plugin
+For further information see https://github.com/peter88213/nv_offline_help_en
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 This program is free software: you can redistribute it and/or modify
@@ -15,19 +15,19 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-from nvplugin.nvplugin_locale import _
-# this should be the first import
 from nvlib.controller.plugin.plugin_base import PluginBase
+from nvofflinehelp.offline_help import OfflineHelp
+from pathlib import Path
+from shutil import rmtree
+import os
 
 
 class Plugin(PluginBase):
     """plugin class."""
     VERSION = '@release'
     API_VERSION = '5.63'
-    DESCRIPTION = 'Plugin'
-    URL = 'https://github.com/peter88213/nv_plugin'
-    HELP_SITE = 'https://peter88213.github.io/nv_plugin'
-    HELP_PAGE = _('help')
+    DESCRIPTION = 'English offline help pages'
+    URL = 'https://github.com/peter88213/nv_offline_help_en'
 
     def install(self, model, view, controller):
         """Install the plugin at runtime.
@@ -39,9 +39,17 @@ class Plugin(PluginBase):
 
         Extends the superclass method.
         """
+        homeDir = str(Path.home()).replace('\\', '/')
+        self.helpSite = f'{homeDir}/.novx/help'
+        if not os.path.isdir(self.helpSite):
+            raise FileNotFoundError('Offline help pages not installed')
+
         super().install(model, view, controller)
+        self.originalHelpService = self._ctrl.helpService
+        self._ctrl.helpService = OfflineHelp(self.helpSite)
 
-        #--- Configure the user interface.
-
-        self._add_help_menu_entry(_('nv_plugin plugin help'))
+    def uninstall(self):
+        rmtree(self.helpSite, ignore_errors=True)
+        self._ctrl.helpService = self.originalHelpService
+        self.isActive = False
 

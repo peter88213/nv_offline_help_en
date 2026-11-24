@@ -1,10 +1,8 @@
-# nv_plugin
+# nv_offline_help_en
 
 The [novelibre](https://github.com/peter88213/novelibre/) Python program helps authors organize novels.  
 
-*nv_plugin* is a plugin providing . 
-
-![Screenshot](docs/Screenshots/screen01.png)
+*nv_offline_help_en* is a plugin providing offline help pages, replacing the built-in online help. 
 
 ## Requirements
 
@@ -14,10 +12,10 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 
 ### Default: Executable Python zip archive
 
-Download the latest release [nv_plugin_v$Version.pyz](https://github.com/peter88213/nv_plugin/raw/main/dist/nv_plugin_v$Version.pyz) ($PyzSize)
+Download the latest release [nv_offline_help_en_v$Version.pyz](https://github.com/peter88213/nv_offline_help_en/raw/main/dist/nv_offline_help_en_v$Version.pyz) ($PyzSize)
 
-- Launch *nv_plugin_v$Version.pyz* by double-clicking (Windows desktop),
-- or execute `python nv_plugin_v$Version.pyz` (Windows), resp. `python3 nv_plugin_v$Version.pyz` (Linux) on the command line.
+- Launch *nv_offline_help_en_v$Version.pyz* by double-clicking (Windows desktop),
+- or execute `python nv_offline_help_en_v$Version.pyz` (Windows), resp. `python3 nv_offline_help_en_v$Version.pyz` (Linux) on the command line.
 
 > [!IMPORTANT]
 > Many web browsers recognize the download as an executable file and offer to open it immediately. 
@@ -32,9 +30,9 @@ Download the latest release [nv_plugin_v$Version.pyz](https://github.com/peter88
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [nv_plugin_v$Version.zip](https://github.com/peter88213/nv_plugin/raw/main/dist/nv_plugin_v$Version.zip) ($ZipSize)
+The package is also available in zip format: [nv_offline_help_en_v$Version.zip](https://github.com/peter88213/nv_offline_help_en/raw/main/dist/nv_offline_help_en_v$Version.zip) ($ZipSize)
 
-- Extract the *nv_plugin_v$Version* folder from the downloaded zipfile "nv_plugin_v$Version.zip".
+- Extract the *nv_offline_help_en_v$Version* folder from the downloaded zipfile "nv_offline_help_en_v$Version.zip".
 - Move into this new folder and launch *setup.py* by double-clicking (Windows/Linux desktop), 
 - or execute `python setup.py` (Windows), resp. `python3 setup.py` (Linux) on the command line.
 
@@ -50,6 +48,6 @@ See the [online manual](docs/usage.md)
 
 ## License
 
-This is Open Source software, and the *nv_plugin* plugin is licensed under GPLv3. See the
+This is Open Source software, and the *nv_offline_help_en* plugin is licensed under GPLv3. See the
 [GNU General Public License website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more
 details, or consult the [LICENSE](LICENSE) file.

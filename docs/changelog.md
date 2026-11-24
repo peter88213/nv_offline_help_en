@@ -5,8 +5,10 @@
 ## Changelog
 
 
-### Version 5.0.0
+### Version 5.68.0
 
-- Release under the GPLv3 license.
+- Help pages: nvhelp-en 5.68.3.
 
-Compatibility: novelibre version 5.0 API
+API: 5.63
+Based on novelibre 5.68.2
+

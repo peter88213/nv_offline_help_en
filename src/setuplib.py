@@ -1,9 +1,9 @@
-"""nv_plugin installer library module. 
+"""nv_offline_help_en installer library module. 
 
 Version @release
 
 Copyright (c) 2024-2026 Peter Triesberger
-For further information see https://github.com/peter88213/nv_plugin
+For further information see https://github.com/peter88213/nv_offline_help_en
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
@@ -13,7 +13,7 @@ from shutil import copytree
 import sys
 import zipfile
 
-PLUGIN = 'nv_plugin.py'
+PLUGIN = 'nv_offline_help_en.py'
 VERSION = '@release'
 
 pyz = os.path.dirname(__file__)
@@ -58,9 +58,9 @@ def install(zipped):
         print(f'Copying "{PLUGIN}" ...')
         copy_file(PLUGIN, pluginDir)
 
-        # Install the localization files.
-        print('Copying locale ...')
-        copy_tree('locale', applicationDir)
+        # Install the HTML help page files.
+        print('Copying help pages ...')
+        copy_tree('help', applicationDir)
 
         # Show a success message.
         print(
