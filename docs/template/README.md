@@ -7,6 +7,10 @@ The [novelibre](https://github.com/peter88213/novelibre/) Python program helps a
 The setup script copies the HTML help pages to the novelibre installation directory. 
 The plugin automatically redirects help requests to the locally installed help pages. 
 
+> [!WARNING]
+> There's no guarantee that this plugin will always provide the most up-to-date help pages.
+> So only install it if you absolutely need a help feature while you don't have Internet access. 
+
 
 ## Requirements
 
